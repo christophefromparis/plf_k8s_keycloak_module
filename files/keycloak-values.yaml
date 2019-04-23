@@ -1,0 +1,25 @@
+keycloak:
+  ingress:
+    enabled: true
+    path: /
+    annotations:
+      kubernetes.io/tls-acme: "true"
+      ingress.kubernetes.io/affinity: cookie
+    hosts:
+    - ${keycloak_host}
+    tls:
+    - hosts:
+      - ${keycloak_host}
+      secretName: keycloak-tls
+
+  extraVolumes: |
+    - name: k8s-realm
+      secret:
+        secretName: k8s-realm
+
+  extraVolumeMounts: |
+    - name: k8s-realm
+      mountPath: "/realm/"
+      readOnly: true
+
+  extraArgs: -Dkeycloak.import=/realm/k8s-realm.json
