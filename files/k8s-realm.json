@@ -393,17 +393,17 @@
       "clientId": "nodejs",
       "name": "Node.js",
       "description": "The Node.js example",
-      "rootUrl": "https://nodejs-example.k.infra.istefr.fr/",
-      "adminUrl": "https://nodejs-example.k.infra.istefr.fr/",
+      "rootUrl": "https://nodejs-example.yelty-test.fr/",
+      "adminUrl": "https://nodejs-example.yelty-test.fr/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://nodejs-example.k.infra.istefr.fr/*"
+        "http://nodejs-example.yelty-test.fr/*"
       ],
       "webOrigins": [
-        "https://nodejs-example.k.infra.istefr.fr"
+        "https://nodejs-example.yelty-test.fr"
       ],
       "notBefore": 0,
       "bearerOnly": false,
